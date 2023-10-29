@@ -17,28 +17,26 @@
 ! result: “FUuNnnTtttIiiiiOoooooNnnnnnn”
 */
 
-function repetitions(text) {
-    if (typeof text !== 'string') {
-      return "Por favor, introduzca una cadena de texto válida.";
-    }
-  
-    let result = "";
-    for (let i = 0; i < text.length; i++) {
-      let char = text.charAt(i);
-      result += char.toUpperCase();
-  
-      for (let j = 0; j < i; j++) {
-        result += char.toLowerCase();
+function repetitions(inputString) {
+  let result = "";
+
+  for (let i = 0; i < inputString.length; i++) {
+      let letra = inputString.charAt(i);
+      
+      let numRepeticiones = i + 1;
+      
+      for (let j = 0; j < numRepeticiones; j++) {
+          if (j === 0) {
+              result += letra.toUpperCase();
+          } else {
+              result += letra.toLowerCase();
+          }
       }
-  
-      if (i < text.length - 1) {
-        result += char; 
-      }
-    }
-    return result;
   }
-  
-  //* Ejemplos de uso:
-  //showContent(5,repetitions('code'));
-  //showContent(5,repetitions('list'));
-  showContent(5,repetitions('function'));
+
+  return result;
+}
+
+let inputString = "abcdefg";
+let resultado = repetitions(inputString);
+console.log(resultado);

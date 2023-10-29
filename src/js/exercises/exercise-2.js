@@ -6,19 +6,14 @@
 * “Number 34 is even” ó “Number 13 is odd”
 */
 
-//* Definimos un número :
-let number = 34;
-let result = "";
 
-//* Comprobamos mediante una condicional si es
-//* par o impar:
-function evenOrOdd(number) { 
-    if (number % 2 === 0) {
-        result = "Number " + number + " is even";
+function determinarParOImpar(numero) {
+    if (numero % 2 === 0) {
+        console.log("Number " + numero + " is even");
     } else {
-        result = "Number " + number + " is odd";
+        console.log("Number " + numero + " is odd");
     }
-    return result;
 }
 
-showContent(2, evenOrOdd(2));
+determinarParOImpar(34);
+determinarParOImpar(13);

@@ -6,3 +6,5 @@ que ocupa cada carácter en el abecedario. Para que sea más sencillo, elimina l
 */
 
 const alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+const abc = "abc";

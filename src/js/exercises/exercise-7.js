@@ -11,9 +11,9 @@ function esPalindromo(String) {
     const StringInvertida = String.split("").reverse().join("");
 
     if (String === StringInvertida) {
-        return `La cadena "${String}" es un palíndromo.`;
+        return `La cadena de texto "${String}" es un palíndromo.`;
     } else {
-        return `La cadena "${String}" no es un palíndromo.`;
+        return `La cadena de texto "${String}" no es un palíndromo.`;
     }
 }
 

@@ -22,3 +22,15 @@ Agrupa en un array las peliculas por categorias:
     }
 ]
 */
+const peliculasAgrupadas = {};
+
+movies.forEach((pelicula) => {
+  const categoria = pelicula.category;
+  if (!peliculasAgrupadas[categoria]) {
+    peliculasAgrupadas[categoria] = [];
+  }
+  peliculasAgrupadas[categoria].push(pelicula);
+});
+
+console.log("Películas agrupadas por categoría:");
+console.log(peliculasAgrupadas);

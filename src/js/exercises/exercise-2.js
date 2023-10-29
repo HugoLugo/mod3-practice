@@ -17,3 +17,5 @@ function determinarParOImpar(numero) {
 
 determinarParOImpar(34);
 determinarParOImpar(13);
+
+showContent (2, determinarParOImpar(34), determinarParOImpar(13));

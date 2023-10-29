@@ -12,7 +12,7 @@ function esIsograma(string) {
   
     for (let letra of string) {
       if (frecuenciaLetras[letra]) {
-        return `La cadena '${string}' no es un isograma`;
+        return `La cadena de texto'${string}' no es un isograma`;
       }
       frecuenciaLetras[letra] = 1;
     }

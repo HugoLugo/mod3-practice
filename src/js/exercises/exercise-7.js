@@ -5,21 +5,21 @@
 * es un palíndromo y devuelva un mensaje con la cadena de 
 * texto y el resultado
 */
-function esPalindromo(cadena) {
-    cadena = cadena.replace(/ /g, "").toLowerCase();
+function esPalindromo(String) {
+    String = String.replace(/ /g, "").toLowerCase();
 
-    const cadenaInvertida = cadena.split("").reverse().join("");
+    const StringInvertida = String.split("").reverse().join("");
 
-    if (cadena === cadenaInvertida) {
-        return `La cadena "${cadena}" es un palíndromo.`;
+    if (String === StringInvertida) {
+        return `La cadena "${String}" es un palíndromo.`;
     } else {
-        return `La cadena "${cadena}" no es un palíndromo.`;
+        return `La cadena "${String}" no es un palíndromo.`;
     }
 }
 
-const cadena1 = "anilina";
-const cadena2 = "hola mundo";
+const String1 = "anilina";
+const String2 = "hola mundo";
 
-console.log(esPalindromo(cadena1)); 
-console.log(esPalindromo(cadena2)); 
+console.log(esPalindromo(String1)); 
+console.log(esPalindromo(String2)); 
 

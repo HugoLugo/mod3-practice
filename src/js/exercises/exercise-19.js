@@ -14,3 +14,26 @@ Ejemplo: "Hello world"
 }
 Nota: siempre letras minúsculas y sin tildes (para simplificar)
 */
+
+function contarLetras(texto) {
+    texto = texto.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  
+    const frecuenciaLetras = {};
+  
+    for (let letra of texto) {
+      if (letra.match(/[a-z]/)) {
+        if (frecuenciaLetras[letra]) {
+          frecuenciaLetras[letra]++;
+        } else {
+          frecuenciaLetras[letra] = 1;
+        }
+      }
+    }
+  
+    return frecuenciaLetras;
+  }
+  
+  const string = "Hello world";
+  const resultado = contarLetras(string);
+  console.log(resultado);
+  

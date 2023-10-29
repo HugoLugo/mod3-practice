@@ -20,6 +20,6 @@ function esPalindromo(cadena) {
 const cadena1 = "anilina";
 const cadena2 = "hola mundo";
 
-console.log(esPalindromo(cadena1)); // Resultado: La cadena "anilina" es un palíndromo.
-console.log(esPalindromo(cadena2)); // Resultado: La cadena "hola mundo" no es un palíndromo.
+console.log(esPalindromo(cadena1)); 
+console.log(esPalindromo(cadena2)); 
 

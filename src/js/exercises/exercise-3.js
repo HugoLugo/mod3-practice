@@ -21,4 +21,6 @@ function countVowels(inputString) {
 
 let inputString = "Hello, World!";
 let result = countVowels(inputString);
-console.log(result);
+return(result);
+
+showContent(3, console.log(result));

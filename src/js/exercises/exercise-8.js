@@ -5,8 +5,8 @@ que ocupa cada carácter en el abecedario. Para que sea más sencillo, elimina l
 (recuerda que puedes utilizar las funciones de ejercicios anteriores).
 */
 
-function limpiarCadena(cadena) {
-    return cadena.replace(/ /g, "").normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+function cleanstring(string) {
+    return string.replace(/ /g, "").normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
 function posicionEnAbecedario(letra) {
@@ -15,11 +15,11 @@ function posicionEnAbecedario(letra) {
     return letra.charCodeAt(0) - codigoA + 1;
 }
 
-function posicionesEnAbecedario(cadena) {
-    const cadenaLimpia = limpiarCadena(cadena);
+function posicionesEnAbecedario(string) {
+    const cleanedstring = cleanstring(string);
     const posiciones = [];
-    for (let i = 0; i < cadenaLimpia.length; i++) {
-        const letra = cadenaLimpia[i];
+    for (let i = 0; i < cleanedstring.length; i++) {
+        const letra = cleanedstring[i];
         const posicion = posicionEnAbecedario(letra);
         posiciones.push(posicion);
     }

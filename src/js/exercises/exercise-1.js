@@ -9,3 +9,5 @@ function saludar(nombre) {
 }
 
 saludar("Hugo");
+
+showContent(1, saludar("Hugo"));
